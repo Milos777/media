@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,100,900,100italic,300,300italic,500italic,700,700italic,900italic);
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
+$gold: #9e914c;
+$black: #333;
+$gray: #6a6a6a;
+$roboto : 'Roboto', sans-serif;
+$kufi : 'Droid Arabic Kufi', serif;
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+}
+@include breakpoint(xs){
+.grid {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 20px; 
+		padding-right: 10px; 
+                   
+	}
+	[class*='col-'] {
+		width: auto;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-left: 0px;
+		padding-right: 10px;
+	}
+}        
+.media {
+    display: table;
+    width: 100%;
+    direction:rtl;
+    margin-bottom:20px;
+}
+
+    .media__image,
+    .media__body {
+        display: table-cell;
+        vertical-align: top;        
+        
+        
+            &--link{
+                color: $gold;
+                font-family: $kufi;
+                text-align:right;
+                font-size: 18px;                        
+                @include breakpoint(xs) {
+                font-size:75%;
+                }
+            }           
+            &--text{
+                color: $black;
+                font-family: $kufi;
+                text-align:right;
+                font-size: 24px;
+                
+                @include breakpoint(xs) {
+                font-size:70%;
+                }    
+            }
+            
+        &-event{
+                    > span, time {
+                        display:block;
+                        color: $gray;
+                        font-size: 18px;
+                        @include breakpoint(xs) {
+                        font-size:75%;
+                            
+                }
+                    }
+                   
+        }
+        &--teaser{
+           display: table-row;
+           padding-right: 20px;
+            width:100%; 
+            > img {
+            display: block;
+            @include breakpoint(xs) {
+                        width:100%;
+                }
+            }        
+        }
+    }
+    .media__body{
+        padding-right:30px;
+                @include breakpoint(xs) {
+                        padding-right:20px;
+                }
+    }
+    .media__image {
+        width:39.3%;
+                > img {
+                        display: block;
+                        width:100%;               
+        }
+    }
+
+    
