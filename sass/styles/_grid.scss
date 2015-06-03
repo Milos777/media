@@ -1,0 +1,44 @@
+@import "breakpoint-variables";
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.grid {
+	width: 100%;
+	max-width: 1140px;
+	min-width: 755px;
+	margin: 0 auto;
+	overflow: hidden;
+        
+}
+
+.grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.right{
+	width: 550px;
+        float:right;
+}
+@include breakpoint(desktop-mobile) {
+            .grid {
+		width: 100%;
+		min-width: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 20px; 
+		padding-right: 10px; 
+                   
+	}
+	.right {
+		width: auto;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-left: 0px;
+		padding-right: 10px;
+	}
+                }

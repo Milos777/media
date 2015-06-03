@@ -1,7 +1,36 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,100,900,100italic,300,300italic,500italic,700,700italic,900italic);
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+/* line 2, ../sass/styles/_grid.scss */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../sass/styles/_grid.scss */
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 755px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* line 16, ../sass/styles/_grid.scss */
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 21, ../sass/styles/_grid.scss */
+.right {
+  width: 550px;
+  float: right;
+}
+
 @media (max-width: 767px) {
-  /* line 16, ../sass/style.scss */
+  /* line 26, ../sass/styles/_grid.scss */
   .grid {
     width: 100%;
     min-width: 0;
@@ -11,8 +40,8 @@
     padding-right: 10px;
   }
 
-  /* line 25, ../sass/style.scss */
-  [class*='col-'] {
+  /* line 35, ../sass/styles/_grid.scss */
+  .right {
     width: auto;
     margin-left: 0px;
     margin-right: 0px;
@@ -22,7 +51,7 @@
     padding-right: 10px;
   }
 }
-/* line 35, ../sass/style.scss */
+/* line 1, ../sass/styles/_media.scss */
 .media {
   display: table;
   width: 100%;
@@ -30,13 +59,13 @@
   margin-bottom: 20px;
 }
 
-/* line 42, ../sass/style.scss */
+/* line 8, ../sass/styles/_media.scss */
 .media__image,
 .media__body {
   display: table-cell;
   vertical-align: top;
 }
-/* line 48, ../sass/style.scss */
+/* line 14, ../sass/styles/_media.scss */
 .media__image--link,
 .media__body--link {
   color: #9e914c;
@@ -45,13 +74,13 @@
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 48, ../sass/style.scss */
+  /* line 14, ../sass/styles/_media.scss */
   .media__image--link,
   .media__body--link {
     font-size: 75%;
   }
 }
-/* line 57, ../sass/style.scss */
+/* line 23, ../sass/styles/_media.scss */
 .media__image--text,
 .media__body--text {
   color: #333;
@@ -60,13 +89,13 @@
   font-size: 24px;
 }
 @media (max-width: 767px) {
-  /* line 57, ../sass/style.scss */
+  /* line 23, ../sass/styles/_media.scss */
   .media__image--text,
   .media__body--text {
     font-size: 70%;
   }
 }
-/* line 69, ../sass/style.scss */
+/* line 35, ../sass/styles/_media.scss */
 .media__image-event > span, .media__image-event time,
 .media__body-event > span,
 .media__body-event time {
@@ -75,49 +104,49 @@
   font-size: 18px;
 }
 @media (max-width: 767px) {
-  /* line 69, ../sass/style.scss */
+  /* line 35, ../sass/styles/_media.scss */
   .media__image-event > span, .media__image-event time,
   .media__body-event > span,
   .media__body-event time {
     font-size: 75%;
   }
 }
-/* line 80, ../sass/style.scss */
+/* line 46, ../sass/styles/_media.scss */
 .media__image--teaser,
 .media__body--teaser {
   display: table-row;
   padding-right: 20px;
   width: 100%;
 }
-/* line 84, ../sass/style.scss */
+/* line 50, ../sass/styles/_media.scss */
 .media__image--teaser > img,
 .media__body--teaser > img {
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 84, ../sass/style.scss */
+  /* line 50, ../sass/styles/_media.scss */
   .media__image--teaser > img,
   .media__body--teaser > img {
     width: 100%;
   }
 }
 
-/* line 92, ../sass/style.scss */
+/* line 58, ../sass/styles/_media.scss */
 .media__body {
   padding-right: 30px;
 }
 @media (max-width: 767px) {
-  /* line 92, ../sass/style.scss */
+  /* line 58, ../sass/styles/_media.scss */
   .media__body {
     padding-right: 20px;
   }
 }
 
-/* line 98, ../sass/style.scss */
+/* line 64, ../sass/styles/_media.scss */
 .media__image {
   width: 39.3%;
 }
-/* line 100, ../sass/style.scss */
+/* line 66, ../sass/styles/_media.scss */
 .media__image > img {
   display: block;
   width: 100%;

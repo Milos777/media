@@ -1,0 +1,5 @@
+@mixin breakpoint($class) {
+  @if $class == desktop-mobile {
+    @media (max-width: 767px) { @content; }
+  }
+}
