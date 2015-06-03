@@ -1,0 +1,118 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,100,900,100italic,300,300italic,500italic,700,700italic,900italic);
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.grid {
+  width: 100%;
+  max-width: 1140px;
+  min-width: 755px;
+  margin: 0 auto;
+  overflow: hidden; }
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.right {
+  width: 550px;
+  float: right; }
+
+@media (max-width: 767px) {
+  .grid {
+    width: 100%;
+    min-width: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
+    padding-right: 10px; }
+
+  .right {
+    width: auto;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 10px; } }
+.media {
+  display: table;
+  width: 100%;
+  direction: rtl;
+  margin-bottom: 20px; }
+
+.media__image,
+.media__body {
+  display: table-cell;
+  vertical-align: top; }
+  .media__image--link,
+  .media__body--link {
+    color: #9e914c;
+    font-family: "Droid Arabic Kufi", serif;
+    text-align: right;
+    font-size: 18px;
+    position: relative; }
+    @media (max-width: 767px) {
+      .media__image--link,
+      .media__body--link {
+        font-size: 16px; } }
+  .media__image--link:before,
+  .media__body--link:before {
+    background: none repeat scroll 0 0 #9e914c;
+    content: "";
+    height: 3px;
+    right: 0;
+    position: absolute;
+    top: 0px;
+    width: 65px; }
+  .media__image--text,
+  .media__body--text {
+    color: #333;
+    font-family: "Droid Arabic Kufi", serif;
+    text-align: right;
+    font-size: 24px; }
+    @media (max-width: 767px) {
+      .media__image--text,
+      .media__body--text {
+        font-size: 20px; } }
+  .media__image-event--time, .media__image-event--title,
+  .media__body-event--time,
+  .media__body-event--title {
+    display: block;
+    color: #6a6a6a;
+    font-size: 18px;
+    margin-bottom: 5px; }
+    @media (max-width: 767px) {
+      .media__image-event--time, .media__image-event--title,
+      .media__body-event--time,
+      .media__body-event--title {
+        font-size: 16px; } }
+  .media__image--teaser,
+  .media__body--teaser {
+    display: table-row;
+    padding-right: 20px;
+    width: 100%; }
+    .media__image--teaser > img,
+    .media__body--teaser > img {
+      display: block; }
+      @media (max-width: 767px) {
+        .media__image--teaser > img,
+        .media__body--teaser > img {
+          width: 100%; } }
+
+.media__body {
+  padding-right: 30px; }
+  @media (max-width: 767px) {
+    .media__body {
+      padding-right: 20px; } }
+
+.media__image {
+  width: 39.3%; }
+  .media__image > img {
+    display: block;
+    width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

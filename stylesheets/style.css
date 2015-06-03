@@ -65,7 +65,7 @@
   display: table-cell;
   vertical-align: top;
 }
-/* line 14, ../sass/styles/_media.scss */
+/* line 13, ../sass/styles/_media.scss */
 .media__image--link,
 .media__body--link {
   color: #9e914c;
@@ -75,13 +75,13 @@
   position: relative;
 }
 @media (max-width: 767px) {
-  /* line 14, ../sass/styles/_media.scss */
+  /* line 13, ../sass/styles/_media.scss */
   .media__image--link,
   .media__body--link {
     font-size: 16px;
   }
 }
-/* line 24, ../sass/styles/_media.scss */
+/* line 23, ../sass/styles/_media.scss */
 .media__image--link:before,
 .media__body--link:before {
   background: none repeat scroll 0 0 #9e914c;
@@ -108,57 +108,58 @@
   }
 }
 /* line 45, ../sass/styles/_media.scss */
-.media__image-event > span, .media__image-event time,
-.media__body-event > span,
-.media__body-event time {
+.media__image-event--time, .media__image-event--title,
+.media__body-event--time,
+.media__body-event--title {
   display: block;
   color: #6a6a6a;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 @media (max-width: 767px) {
   /* line 45, ../sass/styles/_media.scss */
-  .media__image-event > span, .media__image-event time,
-  .media__body-event > span,
-  .media__body-event time {
+  .media__image-event--time, .media__image-event--title,
+  .media__body-event--time,
+  .media__body-event--title {
     font-size: 16px;
   }
 }
-/* line 56, ../sass/styles/_media.scss */
+/* line 57, ../sass/styles/_media.scss */
 .media__image--teaser,
 .media__body--teaser {
   display: table-row;
   padding-right: 20px;
   width: 100%;
 }
-/* line 60, ../sass/styles/_media.scss */
+/* line 61, ../sass/styles/_media.scss */
 .media__image--teaser > img,
 .media__body--teaser > img {
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 60, ../sass/styles/_media.scss */
+  /* line 61, ../sass/styles/_media.scss */
   .media__image--teaser > img,
   .media__body--teaser > img {
     width: 100%;
   }
 }
 
-/* line 69, ../sass/styles/_media.scss */
+/* line 70, ../sass/styles/_media.scss */
 .media__body {
   padding-right: 30px;
 }
 @media (max-width: 767px) {
-  /* line 69, ../sass/styles/_media.scss */
+  /* line 70, ../sass/styles/_media.scss */
   .media__body {
     padding-right: 20px;
   }
 }
 
-/* line 75, ../sass/styles/_media.scss */
+/* line 76, ../sass/styles/_media.scss */
 .media__image {
   width: 39.3%;
 }
-/* line 77, ../sass/styles/_media.scss */
+/* line 78, ../sass/styles/_media.scss */
 .media__image > img {
   display: block;
   width: 100%;

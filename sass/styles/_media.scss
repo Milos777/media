@@ -9,8 +9,7 @@
     .media__body {
         display: table-cell;
         vertical-align: top;        
-        
-            
+                    
             &--link{
                 color: $gold;
                 font-family: $kufi;
@@ -21,15 +20,16 @@
                 font-size: 16px;
                 }
             }
-    &--link:before{
-         background: none repeat scroll 0 0 #9e914c;
-         content: "";
-         height: 3px;
-        right: 0;
-        position: absolute;
-        top: 0px;
-        width: 65px;
-    }
+                &--link:before{
+                    background: none repeat scroll 0 0 #9e914c;
+                    content: "";
+                    height: 3px;
+                    right: 0;
+                    position: absolute;
+                    top: 0px;
+                    width: 65px;
+            }
+            
             &--text{
                 color: $black;
                 font-family: $kufi;
@@ -41,11 +41,12 @@
                 }    
             }
             
-        &-event{
-                    > span, time {
+            &-event{
+                    &--time, &--title {
                         display:block;
                         color: $gray;
                         font-size: 18px;
+                        margin-bottom: 5px;
                         @include breakpoint(desktop-mobile) {
                         font-size: 16px;
                             
