@@ -78,17 +78,19 @@
       .media__image--text,
       .media__body--text {
         font-size: 20px; } }
-  .media__image-event--time, .media__image-event--title,
+  .media__image-event--time, .media__image-event--title, .media__image-event--user,
   .media__body-event--time,
-  .media__body-event--title {
-    display: block;
+  .media__body-event--title,
+  .media__body-event--user {
+    display: inline;
     color: #6a6a6a;
     font-size: 18px;
     margin-bottom: 5px; }
     @media (max-width: 767px) {
-      .media__image-event--time, .media__image-event--title,
+      .media__image-event--time, .media__image-event--title, .media__image-event--user,
       .media__body-event--time,
-      .media__body-event--title {
+      .media__body-event--title,
+      .media__body-event--user {
         font-size: 16px; } }
   .media__image--teaser,
   .media__body--teaser {

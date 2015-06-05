@@ -51,7 +51,7 @@
     padding-right: 10px;
   }
 }
-/* line 1, ../sass/styles/_media.scss */
+/* line 2, ../sass/styles/_media.scss */
 .media {
   display: table;
   width: 100%;
@@ -59,107 +59,263 @@
   margin-bottom: 20px;
 }
 
-/* line 8, ../sass/styles/_media.scss */
+/* line 9, ../sass/styles/_media.scss */
 .media__image,
 .media__body {
   display: table-cell;
   vertical-align: top;
+  /*------------------------------------*\
+      #COMMON
+  \*------------------------------------*/
+  /*------------------------------------*\
+      #MEDIA ADD EVENT (TIME, LOCATION) 
+  \*------------------------------------*/
+  /*------------------------------------*\
+      #MEDIA WITH BIG IMAGE
+  \*------------------------------------*/
 }
-/* line 13, ../sass/styles/_media.scss */
+/* line 17, ../sass/styles/_media.scss */
 .media__image--link,
 .media__body--link {
+  display: block;
   color: #9e914c;
   font-family: "Droid Arabic Kufi", serif;
   text-align: right;
   font-size: 18px;
   position: relative;
+  text-decoration: none;
 }
 @media (max-width: 767px) {
-  /* line 13, ../sass/styles/_media.scss */
+  /* line 17, ../sass/styles/_media.scss */
   .media__image--link,
   .media__body--link {
     font-size: 16px;
   }
 }
-/* line 23, ../sass/styles/_media.scss */
-.media__image--link:before,
-.media__body--link:before {
-  background: none repeat scroll 0 0 #9e914c;
-  content: "";
-  height: 3px;
-  right: 0;
-  position: absolute;
-  top: 0px;
-  width: 65px;
+/* line 31, ../sass/styles/_media.scss */
+.media__image--link:hover,
+.media__body--link:hover {
+  -webkit-transition: all 0.45s ease-in-out;
+  -moz-transition: all 0.45s ease-in-out;
+  -ms-transition: all 0.45s ease-in-out;
+  -o-transition: all 0.45s ease-in-out;
+  color: #6F6635;
 }
-/* line 33, ../sass/styles/_media.scss */
-.media__image--text,
-.media__body--text {
+/* line 36, ../sass/styles/_media.scss */
+.media__image--link-line,
+.media__body--link-line {
+  background: none repeat scroll 0 0 #9e914c;
+  display: block;
+  text-align: right;
+  width: 65px;
+  height: 5px;
+}
+/* line 44, ../sass/styles/_media.scss */
+.media__image--aside-link-line,
+.media__body--aside-link-line {
+  background: none repeat scroll 0 0 #9e914c;
+  display: inline-block;
+  text-align: right;
+  width: 65px;
+  height: 5px;
+  vertical-align: middle;
+}
+/* line 53, ../sass/styles/_media.scss */
+.media__image--link-text,
+.media__body--link-text {
+  display: block;
   color: #333;
   font-family: "Droid Arabic Kufi", serif;
   text-align: right;
   font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
-  /* line 33, ../sass/styles/_media.scss */
-  .media__image--text,
-  .media__body--text {
-    font-size: 20px;
+  /* line 53, ../sass/styles/_media.scss */
+  .media__image--link-text,
+  .media__body--link-text {
+    font-size: 16px;
   }
 }
-/* line 45, ../sass/styles/_media.scss */
-.media__image-event--time, .media__image-event--title,
+/* line 64, ../sass/styles/_media.scss */
+.media__image--link-text-teaser,
+.media__body--link-text-teaser {
+  margin-right: 65px;
+  display: block;
+  color: #333;
+  font-family: "Droid Arabic Kufi", serif;
+  text-align: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+/* line 74, ../sass/styles/_media.scss */
+.media__image--link-text:hover,
+.media__body--link-text:hover {
+  -webkit-transition: all 0.45s ease-in-out;
+  -moz-transition: all 0.45s ease-in-out;
+  -ms-transition: all 0.45s ease-in-out;
+  -o-transition: all 0.45s ease-in-out;
+  color: #6a6a6a;
+}
+/* line 79, ../sass/styles/_media.scss */
+.media__image--text,
+.media__body--text {
+  color: #6a6a6a;
+  text-align: right;
+  font-size: 22px;
+  display: block;
+}
+@media (max-width: 767px) {
+  /* line 79, ../sass/styles/_media.scss */
+  .media__image--text,
+  .media__body--text {
+    font-size: 14px;
+  }
+}
+/* line 87, ../sass/styles/_media.scss */
+.media__image--text-teaser,
+.media__body--text-teaser {
+  margin-right: 65px;
+  color: #6a6a6a;
+  text-align: right;
+  font-size: 22px;
+  display: block;
+}
+/* line 103, ../sass/styles/_media.scss */
+.media__image-event--time, .media__image-event--location,
 .media__body-event--time,
-.media__body-event--title {
+.media__body-event--location {
   display: block;
   color: #6a6a6a;
   font-size: 18px;
   margin-bottom: 5px;
+  margin-top: 5px;
+  /*------------------------------------*\
+          #MEDIA ICONS INLINE (DETAILED) 
+   \*------------------------------------*/
 }
 @media (max-width: 767px) {
-  /* line 45, ../sass/styles/_media.scss */
-  .media__image-event--time, .media__image-event--title,
+  /* line 103, ../sass/styles/_media.scss */
+  .media__image-event--time, .media__image-event--location,
   .media__body-event--time,
-  .media__body-event--title {
+  .media__body-event--location {
     font-size: 16px;
   }
 }
-/* line 57, ../sass/styles/_media.scss */
+/* line 118, ../sass/styles/_media.scss */
+.media__image-event--link-article, .media__image-event--user-article, .media__image-event--time-article,
+.media__body-event--link-article,
+.media__body-event--user-article,
+.media__body-event--time-article {
+  display: inline-block;
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+/* line 126, ../sass/styles/_media.scss */
+.media__image-event--icon,
+.media__body-event--icon {
+  padding-left: 10px;
+}
+/* line 128, ../sass/styles/_media.scss */
+.media__image-event--icon-article,
+.media__body-event--icon-article {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+/* line 138, ../sass/styles/_media.scss */
+.media__image-event--time-article, .media__image-event--user-article::after,
+.media__body-event--time-article,
+.media__body-event--user-article::after {
+  content: " | ";
+}
+@media (max-width: 767px) {
+  /* line 138, ../sass/styles/_media.scss */
+  .media__image-event--time-article, .media__image-event--user-article::after,
+  .media__body-event--time-article,
+  .media__body-event--user-article::after {
+    content: "";
+  }
+}
+/* line 144, ../sass/styles/_media.scss */
+.media__image-event--link-article,
+.media__body-event--link-article {
+  color: #9e914c;
+  font-family: "Droid Arabic Kufi", serif;
+  text-align: right;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  /* line 144, ../sass/styles/_media.scss */
+  .media__image-event--link-article,
+  .media__body-event--link-article {
+    font-size: 14px;
+  }
+}
+/* line 155, ../sass/styles/_media.scss */
+.media__image-event--link-article::after,
+.media__body-event--link-article::after {
+  content: " | ";
+  color: #333;
+}
+@media (max-width: 767px) {
+  /* line 155, ../sass/styles/_media.scss */
+  .media__image-event--link-article::after,
+  .media__body-event--link-article::after {
+    content: "";
+  }
+}
+/* line 171, ../sass/styles/_media.scss */
 .media__image--teaser,
 .media__body--teaser {
   display: table-row;
   padding-right: 20px;
   width: 100%;
 }
-/* line 61, ../sass/styles/_media.scss */
+/* line 175, ../sass/styles/_media.scss */
 .media__image--teaser > img,
 .media__body--teaser > img {
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 61, ../sass/styles/_media.scss */
+  /* line 175, ../sass/styles/_media.scss */
   .media__image--teaser > img,
   .media__body--teaser > img {
     width: 100%;
   }
 }
 
-/* line 70, ../sass/styles/_media.scss */
+/*------------------------------------*\
+    #MEDIA BODY DISTANCE (PADDINGS)
+\*------------------------------------*/
+/* line 189, ../sass/styles/_media.scss */
 .media__body {
   padding-right: 30px;
 }
+/* line 191, ../sass/styles/_media.scss */
+.media__body--teaser {
+  margin-top: 20px;
+  display: block;
+}
 @media (max-width: 767px) {
-  /* line 70, ../sass/styles/_media.scss */
+  /* line 189, ../sass/styles/_media.scss */
   .media__body {
     padding-right: 20px;
   }
 }
 
-/* line 76, ../sass/styles/_media.scss */
+/*------------------------------------*\
+    #MEDIA IMAGE SIZE
+\*------------------------------------*/
+/* line 204, ../sass/styles/_media.scss */
 .media__image {
   width: 39.3%;
 }
-/* line 78, ../sass/styles/_media.scss */
+/* line 206, ../sass/styles/_media.scss */
 .media__image > img {
   display: block;
   width: 100%;

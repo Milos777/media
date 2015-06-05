@@ -1,3 +1,4 @@
+@import "transition";
 .media {
     display: table;
     width: 100%;
@@ -9,54 +10,167 @@
     .media__body {
         display: table-cell;
         vertical-align: top;        
-                    
+        
+/*------------------------------------*\
+    #COMMON
+\*------------------------------------*/            
             &--link{
+                display: block;
                 color: $gold;
                 font-family: $kufi;
                 text-align:right;
                 font-size: 18px;
-                position:relative;    
+                position:relative;
+                text-decoration:none;        
                 @include breakpoint(desktop-mobile) {
                 font-size: 16px;
+                    
                 }
             }
-                &--link:before{
-                    background: none repeat scroll 0 0 #9e914c;
-                    content: "";
-                    height: 3px;
-                    right: 0;
-                    position: absolute;
-                    top: 0px;
-                    width: 65px;
+                
+                &--link:hover{
+                   @include transition;
+                   color: $darker-gold;
+                   
             }
-            
-            &--text{
+            &--link-line{
+                    background: none repeat scroll 0 0 #9e914c;                                        
+                    display:block;
+                    text-align:right;
+                    width: 65px;
+                    height: 5px;
+                    
+            }
+            &--aside-link-line{
+                    background: none repeat scroll 0 0 #9e914c;                                        
+                    display:inline-block;
+                    text-align:right;
+                    width: 65px;
+                    height: 5px;
+                    vertical-align: middle;
+                    
+            }
+            &--link-text{
+                display:block;
                 color: $black;
                 font-family: $kufi;
                 text-align:right;
                 font-size: 24px;
-                
+                font-weight: bold;
+                cursor:pointer;
                 @include breakpoint(desktop-mobile) {
-                font-size: 20px;
-                }    
+                font-size: 16px;
+                }
+                &-teaser{
+                      margin-right: 65px;
+                      display:block;
+                      color: $black;
+                      font-family: $kufi;
+                      text-align:right;
+                      font-size: 24px;
+                      font-weight: bold;          
+                }
             }
-            
+            &--link-text:hover{
+                   @include transition;
+                   color: $gray;
+                   
+            }
+            &--text{
+                        color:$gray;
+                        text-align:right;
+                        font-size: 22px;
+                        display:block;
+                            @include breakpoint(desktop-mobile) {
+                                font-size: 14px;
+                            }
+                        &-teaser{
+                        margin-right: 65px;
+                        color:$gray;
+                        text-align:right;
+                        font-size: 22px;
+                        display:block;            
+                        }    
+                        
+                    }
+
+    
+/*------------------------------------*\
+    #MEDIA ADD EVENT (TIME, LOCATION) 
+\*------------------------------------*/            
             &-event{
-                    &--time, &--title {
+                                
+                    &--time, &--location {
                         display:block;
                         color: $gray;
                         font-size: 18px;
                         margin-bottom: 5px;
+                        margin-top:5px;
                         @include breakpoint(desktop-mobile) {
-                        font-size: 16px;
+                        font-size: 16px;                           
+                        }
+                        
+                        /*------------------------------------*\
+                                #MEDIA ICONS INLINE (DETAILED) 
+                         \*------------------------------------*/
                             
-                }
                     }
-                   
-        }
+                    &--link-article, &--user-article, &--time-article{
+                                display:inline-block;
+                                color: $gray;
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                                margin-top:5px;
+                                    
+                        }
+                    &--icon{
+                        padding-left: 10px; 
+                            &-article {
+                                vertical-align:middle;
+                                
+                                padding-left: 10px;            
+                            }           
+                    }
+                    
+                    
+        
+                    
+                    &--time-article, &--user-article::after{
+                        content: " | ";
+                        @include breakpoint(desktop-mobile) {
+                                content: "";
+                                }             
+                    }
+                    &--link-article{
+                        color: $gold;
+                        font-family: $kufi;
+                        text-align:right;
+                        font-size: 14px;
+                        position:relative;
+                        text-decoration:none;        
+                            @include breakpoint(desktop-mobile) {
+                                font-size: 14px;
+                                }
+                    }
+                    &--link-article::after{
+                        content: " | ";
+                        color: $black;
+                                    @include breakpoint(desktop-mobile) {
+                                        content: "";
+                                    }
+                    }
+                    
+                    
+                    
+                
+            }
+
+/*------------------------------------*\
+    #MEDIA WITH BIG IMAGE
+\*------------------------------------*/    
         &--teaser{
-           display: table-row;
-           padding-right: 20px;
+            display: table-row;
+            padding-right: 20px;
             width:100%; 
             > img {
             display: block;
@@ -67,12 +181,26 @@
         
         }
     }
+
+/*------------------------------------*\
+    #MEDIA BODY DISTANCE (PADDINGS)
+\*------------------------------------*/ 
+    
     .media__body{
-        padding-right:30px;
-                @include breakpoint(desktop-mobile) {
+            padding-right:30px;
+            &--teaser{
+                margin-top: 20px;
+                display:block;
+            }
+         
+               @include breakpoint(desktop-mobile) {
                         padding-right:20px;
                 }
     }
+    
+/*------------------------------------*\
+    #MEDIA IMAGE SIZE
+\*------------------------------------*/     
     .media__image {
         width:39.3%;
                 > img {
