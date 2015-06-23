@@ -1,5 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,100,900,100italic,300,300italic,500italic,700,700italic,900italic);
+@import url(http://fonts.googleapis.com/earlyaccess/notonaskharabic.css);
 @import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notokufiarabic.css);
 /* line 2, ../sass/styles/_grid.scss */
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
@@ -68,9 +69,6 @@
       #COMMON
   \*------------------------------------*/
   /*------------------------------------*\
-      #MEDIA ADD EVENT (TIME, LOCATION) 
-  \*------------------------------------*/
-  /*------------------------------------*\
       #MEDIA WITH BIG IMAGE
   \*------------------------------------*/
 }
@@ -79,11 +77,25 @@
 .media__body--link {
   display: block;
   color: #9e914c;
-  font-family: "Droid Arabic Kufi", serif;
+  font-family: "Noto Naskh Arabic", serif;
   text-align: right;
-  font-size: 18px;
+  font-size: 16px;
   position: relative;
   text-decoration: none;
+  padding-top: 7px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+/* line 28, ../sass/styles/_media.scss */
+.media__image--link::before,
+.media__body--link::before {
+  background: none repeat scroll 0 0 #9e914c;
+  content: "";
+  height: 3px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 65px;
 }
 @media (max-width: 767px) {
   /* line 17, ../sass/styles/_media.scss */
@@ -92,7 +104,7 @@
     font-size: 16px;
   }
 }
-/* line 31, ../sass/styles/_media.scss */
+/* line 45, ../sass/styles/_media.scss */
 .media__image--link:hover,
 .media__body--link:hover {
   -webkit-transition: all 0.45s ease-in-out;
@@ -101,55 +113,45 @@
   -o-transition: all 0.45s ease-in-out;
   color: #6F6635;
 }
-/* line 36, ../sass/styles/_media.scss */
-.media__image--link-line,
-.media__body--link-line {
-  background: none repeat scroll 0 0 #9e914c;
-  display: block;
-  text-align: right;
-  width: 65px;
-  height: 5px;
-}
-/* line 44, ../sass/styles/_media.scss */
-.media__image--aside-link-line,
-.media__body--aside-link-line {
-  background: none repeat scroll 0 0 #9e914c;
-  display: inline-block;
-  text-align: right;
-  width: 65px;
-  height: 5px;
-  vertical-align: middle;
-}
-/* line 53, ../sass/styles/_media.scss */
+/* line 52, ../sass/styles/_media.scss */
 .media__image--link-text,
 .media__body--link-text {
   display: block;
-  color: #333;
-  font-family: "Droid Arabic Kufi", serif;
+  color: #444;
+  font-family: "Noto Kufi Arabic", serif;
   text-align: right;
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 36px;
   font-weight: bold;
   cursor: pointer;
 }
 @media (max-width: 767px) {
-  /* line 53, ../sass/styles/_media.scss */
+  /* line 52, ../sass/styles/_media.scss */
   .media__image--link-text,
   .media__body--link-text {
     font-size: 16px;
   }
 }
-/* line 64, ../sass/styles/_media.scss */
+/* line 65, ../sass/styles/_media.scss */
 .media__image--link-text-teaser,
 .media__body--link-text-teaser {
   margin-right: 65px;
   display: block;
-  color: #333;
-  font-family: "Droid Arabic Kufi", serif;
+  color: #444;
+  font-family: "Noto Kufi Arabic", serif;
   text-align: right;
-  font-size: 24px;
+  font-size: 30px;
+  line-height: 36px;
   font-weight: bold;
 }
-/* line 74, ../sass/styles/_media.scss */
+@media (max-width: 767px) {
+  /* line 65, ../sass/styles/_media.scss */
+  .media__image--link-text-teaser,
+  .media__body--link-text-teaser {
+    font-size: 16px;
+  }
+}
+/* line 79, ../sass/styles/_media.scss */
 .media__image--link-text:hover,
 .media__body--link-text:hover {
   -webkit-transition: all 0.45s ease-in-out;
@@ -158,22 +160,24 @@
   -o-transition: all 0.45s ease-in-out;
   color: #6a6a6a;
 }
-/* line 79, ../sass/styles/_media.scss */
+/* line 84, ../sass/styles/_media.scss */
 .media__image--text,
 .media__body--text {
   color: #6a6a6a;
   text-align: right;
-  font-size: 22px;
+  font-size: 18px;
   display: block;
+  line-height: 24px;
+  font-family: "Noto Naskh Arabic", serif;
 }
 @media (max-width: 767px) {
-  /* line 79, ../sass/styles/_media.scss */
+  /* line 84, ../sass/styles/_media.scss */
   .media__image--text,
   .media__body--text {
     font-size: 14px;
   }
 }
-/* line 87, ../sass/styles/_media.scss */
+/* line 94, ../sass/styles/_media.scss */
 .media__image--text-teaser,
 .media__body--text-teaser {
   margin-right: 65px;
@@ -182,127 +186,111 @@
   font-size: 22px;
   display: block;
 }
-/* line 103, ../sass/styles/_media.scss */
-.media__image-event--time, .media__image-event--location,
-.media__body-event--time,
-.media__body-event--location {
-  display: block;
-  color: #6a6a6a;
-  font-size: 18px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-  /*------------------------------------*\
-          #MEDIA ICONS INLINE (DETAILED) 
-   \*------------------------------------*/
-}
 @media (max-width: 767px) {
-  /* line 103, ../sass/styles/_media.scss */
-  .media__image-event--time, .media__image-event--location,
-  .media__body-event--time,
-  .media__body-event--location {
+  /* line 94, ../sass/styles/_media.scss */
+  .media__image--text-teaser,
+  .media__body--text-teaser {
     font-size: 16px;
   }
 }
-/* line 118, ../sass/styles/_media.scss */
-.media__image-event--link-article, .media__image-event--user-article, .media__image-event--time-article,
-.media__body-event--link-article,
-.media__body-event--user-article,
-.media__body-event--time-article {
-  display: inline-block;
+/* line 104, ../sass/styles/_media.scss */
+.media__image--text-article,
+.media__body--text-article {
+  margin-right: 65px;
   color: #6a6a6a;
-  font-size: 14px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
-/* line 126, ../sass/styles/_media.scss */
-.media__image-event--icon,
-.media__body-event--icon {
-  padding-left: 10px;
-}
-/* line 128, ../sass/styles/_media.scss */
-.media__image-event--icon-article,
-.media__body-event--icon-article {
-  vertical-align: middle;
-  padding-left: 10px;
-}
-/* line 138, ../sass/styles/_media.scss */
-.media__image-event--time-article, .media__image-event--user-article::after,
-.media__body-event--time-article,
-.media__body-event--user-article::after {
-  content: " | ";
-}
-@media (max-width: 767px) {
-  /* line 138, ../sass/styles/_media.scss */
-  .media__image-event--time-article, .media__image-event--user-article::after,
-  .media__body-event--time-article,
-  .media__body-event--user-article::after {
-    content: "";
-  }
-}
-/* line 144, ../sass/styles/_media.scss */
-.media__image-event--link-article,
-.media__body-event--link-article {
-  color: #9e914c;
-  font-family: "Droid Arabic Kufi", serif;
   text-align: right;
-  font-size: 14px;
-  position: relative;
-  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  font-weight: normal;
 }
 @media (max-width: 767px) {
-  /* line 144, ../sass/styles/_media.scss */
-  .media__image-event--link-article,
-  .media__body-event--link-article {
-    font-size: 14px;
+  /* line 104, ../sass/styles/_media.scss */
+  .media__image--text-article,
+  .media__body--text-article {
+    font-size: 12px;
   }
 }
-/* line 155, ../sass/styles/_media.scss */
-.media__image-event--link-article::after,
-.media__body-event--link-article::after {
-  content: " | ";
-  color: #333;
-}
-@media (max-width: 767px) {
-  /* line 155, ../sass/styles/_media.scss */
-  .media__image-event--link-article::after,
-  .media__body-event--link-article::after {
-    content: "";
-  }
-}
-/* line 171, ../sass/styles/_media.scss */
+/* line 123, ../sass/styles/_media.scss */
 .media__image--teaser,
 .media__body--teaser {
-  display: table-row;
-  padding-right: 20px;
-  width: 100%;
+  font-weight: bold;
 }
-/* line 175, ../sass/styles/_media.scss */
+/* line 125, ../sass/styles/_media.scss */
 .media__image--teaser > img,
 .media__body--teaser > img {
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 175, ../sass/styles/_media.scss */
+  /* line 125, ../sass/styles/_media.scss */
   .media__image--teaser > img,
   .media__body--teaser > img {
     width: 100%;
   }
 }
+/* line 132, ../sass/styles/_media.scss */
+.media__image--teaser-link,
+.media__body--teaser-link {
+  color: #9e914c;
+  font-family: "Noto Naskh Arabic", serif;
+  text-align: right;
+  font-size: 16px;
+  position: relative;
+  text-decoration: none;
+  padding-top: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+@media (max-width: 767px) {
+  /* line 132, ../sass/styles/_media.scss */
+  .media__image--teaser-link,
+  .media__body--teaser-link {
+    font-size: 16px;
+  }
+}
+/* line 150, ../sass/styles/_media.scss */
+.media__image--teaser-text,
+.media__body--teaser-text {
+  color: #444;
+  text-align: right;
+  font-size: 30px;
+  display: block;
+  line-height: 36px;
+  margin-right: 71px;
+  font-family: "Noto Kufi Arabic", serif;
+}
+@media (max-width: 767px) {
+  /* line 150, ../sass/styles/_media.scss */
+  .media__image--teaser-text,
+  .media__body--teaser-text {
+    font-size: 16px;
+  }
+}
+/* line 165, ../sass/styles/_media.scss */
+.media__image--teaser .dash,
+.media__body--teaser .dash {
+  background: none repeat scroll 0 0 #9e914c;
+  content: "";
+  height: 3px;
+  display: inline-block;
+  width: 65px;
+}
 
 /*------------------------------------*\
     #MEDIA BODY DISTANCE (PADDINGS)
 \*------------------------------------*/
-/* line 189, ../sass/styles/_media.scss */
+/* line 182, ../sass/styles/_media.scss */
 .media__body {
-  padding-right: 30px;
+  padding-right: 3.33%;
 }
-/* line 191, ../sass/styles/_media.scss */
+/* line 184, ../sass/styles/_media.scss */
 .media__body--teaser {
-  margin-top: 20px;
   display: block;
 }
 @media (max-width: 767px) {
-  /* line 189, ../sass/styles/_media.scss */
+  /* line 182, ../sass/styles/_media.scss */
   .media__body {
     padding-right: 20px;
   }
@@ -311,12 +299,213 @@
 /*------------------------------------*\
     #MEDIA IMAGE SIZE
 \*------------------------------------*/
-/* line 204, ../sass/styles/_media.scss */
+/* line 197, ../sass/styles/_media.scss */
 .media__image {
   width: 39.3%;
 }
-/* line 206, ../sass/styles/_media.scss */
+/* line 199, ../sass/styles/_media.scss */
 .media__image > img {
   display: block;
   width: 100%;
+}
+
+/*------------------------------------*\
+    #METADATA 
+\*------------------------------------*/
+/* line 208, ../sass/styles/_media.scss */
+.metadata {
+  position: relative;
+}
+/* line 210, ../sass/styles/_media.scss */
+.metadata--time {
+  display: inline-block;
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-family: "Noto Serif", serif;
+  vertical-align: top;
+}
+/* line 218, ../sass/styles/_media.scss */
+.metadata--location {
+  display: inline-block;
+  color: #6a6a6a;
+  font-size: 14px;
+  font-family: "Noto Serif", serif;
+  vertical-align: top;
+  /*------------------------------------*\
+          #MEDIA ICONS INLINE (DETAILED) 
+   \*------------------------------------*/
+}
+/* line 225, ../sass/styles/_media.scss */
+.metadata--location::after {
+  content: " | ";
+  padding-left: 6px;
+  padding-right: 6px;
+  vertical-align: top;
+  color: #bebebe;
+}
+@media (max-width: 767px) {
+  /* line 225, ../sass/styles/_media.scss */
+  .metadata--location::after {
+    content: "";
+  }
+}
+@media (max-width: 767px) {
+  /* line 218, ../sass/styles/_media.scss */
+  .metadata--location {
+    font-size: 16px;
+  }
+}
+/* line 244, ../sass/styles/_media.scss */
+.metadata--link-article, .metadata--user-article, .metadata--time-article {
+  display: inline-block;
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+/* line 254, ../sass/styles/_media.scss */
+.metadata--icon {
+  padding-left: 10px;
+}
+/* line 257, ../sass/styles/_media.scss */
+.metadata--icon-article {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+/* line 267, ../sass/styles/_media.scss */
+.metadata-article {
+  display: block;
+  margin-bottom: 6px;
+}
+/* line 271, ../sass/styles/_media.scss */
+.metadata-article--dash {
+  background: none repeat scroll 0 0 #9e914c;
+  content: "";
+  height: 3px;
+  display: block;
+  width: 65px;
+  margin-bottom: 18px;
+}
+/* line 280, ../sass/styles/_media.scss */
+.metadata-article--user-article::after {
+  content: " | ";
+  color: #6a6a6a;
+}
+@media (max-width: 767px) {
+  /* line 280, ../sass/styles/_media.scss */
+  .metadata-article--user-article::after {
+    content: "";
+  }
+}
+/* line 287, ../sass/styles/_media.scss */
+.metadata-article--link-article::after {
+  content: " | ";
+  color: #6a6a6a;
+}
+@media (max-width: 767px) {
+  /* line 287, ../sass/styles/_media.scss */
+  .metadata-article--link-article::after {
+    content: "";
+  }
+}
+/* line 294, ../sass/styles/_media.scss */
+.metadata-article--time-article {
+  display: inline-block;
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-family: "Noto Serif", serif;
+}
+/* line 301, ../sass/styles/_media.scss */
+.metadata-article--link-article, .metadata-article--user-article {
+  margin-bottom: 20px;
+  color: #9e914c;
+  font-family: "Noto Serif", serif;
+  text-align: right;
+  font-size: 14px;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  /* line 301, ../sass/styles/_media.scss */
+  .metadata-article--link-article, .metadata-article--user-article {
+    font-size: 14px;
+  }
+}
+/* line 313, ../sass/styles/_media.scss */
+.metadata-article--icon {
+  padding-left: 10px;
+}
+/* line 316, ../sass/styles/_media.scss */
+.metadata-article--icon-article {
+  vertical-align: top;
+  padding-left: 10px;
+}
+
+/* line 325, ../sass/styles/_media.scss */
+.metadata-teaser-article {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  /*------------------------------------*\
+          #MEDIA ICONS INLINE (DETAILED) 
+   \*------------------------------------*/
+}
+@media (max-width: 767px) {
+  /* line 325, ../sass/styles/_media.scss */
+  .metadata-teaser-article {
+    padding-right: 65px;
+  }
+}
+/* line 333, ../sass/styles/_media.scss */
+.metadata-teaser-article--time {
+  display: inline-block;
+  color: #6a6a6a;
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-family: "Noto Serif", serif;
+  vertical-align: top;
+}
+/* line 345, ../sass/styles/_media.scss */
+.metadata-teaser-article--link-article, .metadata-teaser-article--user-article {
+  display: inline-block;
+  color: #9e914c;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-family: "Noto Naskh Arabic", serif;
+}
+/* line 351, ../sass/styles/_media.scss */
+.metadata-teaser-article--link-article::after, .metadata-teaser-article--user-article::after {
+  content: " | ";
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #bebebe;
+}
+@media (max-width: 767px) {
+  /* line 351, ../sass/styles/_media.scss */
+  .metadata-teaser-article--link-article::after, .metadata-teaser-article--user-article::after {
+    content: "";
+  }
+}
+@media (max-width: 767px) {
+  /* line 345, ../sass/styles/_media.scss */
+  .metadata-teaser-article--link-article, .metadata-teaser-article--user-article {
+    font-size: 16px;
+  }
+}
+/* line 364, ../sass/styles/_media.scss */
+.metadata-teaser-article--time-article {
+  color: #6a6a6a;
+  font-family: "Noto Serif", serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+/* line 370, ../sass/styles/_media.scss */
+.metadata-teaser-article--icon {
+  padding-left: 10px;
+}
+/* line 373, ../sass/styles/_media.scss */
+.metadata-teaser-article--icon-article {
+  vertical-align: middle;
+  padding-left: 10px;
 }

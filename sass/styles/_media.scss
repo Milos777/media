@@ -17,15 +17,29 @@
             &--link{
                 display: block;
                 color: $gold;
-                font-family: $kufi;
+                font-family: $naskh;
                 text-align:right;
-                font-size: 18px;
+                font-size: 16px;
                 position:relative;
-                text-decoration:none;        
+                text-decoration:none;
+                padding-top: 7px;
+                font-weight: bold;
+                margin-bottom: 6px; 
+                       &::before{
+                                background: none repeat scroll 0 0 #9e914c;
+                                content: "";
+                                height: 3px;
+                                right: 0;
+                                position: absolute;
+                                top: 0;
+                                width: 65px;
+                    
+            }
                 @include breakpoint(desktop-mobile) {
                 font-size: 16px;
                     
                 }
+                
             }
                 
                 &--link:hover{
@@ -33,31 +47,18 @@
                    color: $darker-gold;
                    
             }
-            &--link-line{
-                    background: none repeat scroll 0 0 #9e914c;                                        
-                    display:block;
-                    text-align:right;
-                    width: 65px;
-                    height: 5px;
-                    
-            }
-            &--aside-link-line{
-                    background: none repeat scroll 0 0 #9e914c;                                        
-                    display:inline-block;
-                    text-align:right;
-                    width: 65px;
-                    height: 5px;
-                    vertical-align: middle;
-                    
-            }
+            
+           
             &--link-text{
                 display:block;
                 color: $black;
                 font-family: $kufi;
                 text-align:right;
-                font-size: 24px;
+                font-size: 30px;
+                line-height: 36px;
                 font-weight: bold;
                 cursor:pointer;
+                
                 @include breakpoint(desktop-mobile) {
                 font-size: 16px;
                 }
@@ -67,8 +68,12 @@
                       color: $black;
                       font-family: $kufi;
                       text-align:right;
-                      font-size: 24px;
-                      font-weight: bold;          
+                      font-size: 30px;
+                      line-height: 36px;
+                      font-weight: bold;
+                      @include breakpoint(desktop-mobile) {
+                        font-size: 16px;                           
+                        }          
                 }
             }
             &--link-text:hover{
@@ -79,8 +84,10 @@
             &--text{
                         color:$gray;
                         text-align:right;
-                        font-size: 22px;
+                        font-size: 18px;
                         display:block;
+                        line-height:24px;
+                        font-family: $naskh;
                             @include breakpoint(desktop-mobile) {
                                 font-size: 14px;
                             }
@@ -89,97 +96,83 @@
                         color:$gray;
                         text-align:right;
                         font-size: 22px;
-                        display:block;            
-                        }    
+                        display:block;
+                        @include breakpoint(desktop-mobile) {
+                        font-size: 16px;                           
+                        }
+                        }
+                        &-article{
+                        margin-right: 65px;
+                        color:$gray;
+                        text-align:right;
+                        font-size: 16px;
+                        display:block;
+                        font-weight: normal;
+                        @include breakpoint(desktop-mobile) {
+                        font-size: 12px;                           
+                        }
+                        }
                         
                     }
 
     
-/*------------------------------------*\
-    #MEDIA ADD EVENT (TIME, LOCATION) 
-\*------------------------------------*/            
-            &-event{
-                                
-                    &--time, &--location {
-                        display:block;
-                        color: $gray;
-                        font-size: 18px;
-                        margin-bottom: 5px;
-                        margin-top:5px;
-                        @include breakpoint(desktop-mobile) {
-                        font-size: 16px;                           
-                        }
-                        
-                        /*------------------------------------*\
-                                #MEDIA ICONS INLINE (DETAILED) 
-                         \*------------------------------------*/
-                            
-                    }
-                    &--link-article, &--user-article, &--time-article{
-                                display:inline-block;
-                                color: $gray;
-                                font-size: 14px;
-                                margin-bottom: 5px;
-                                margin-top:5px;
-                                    
-                        }
-                    &--icon{
-                        padding-left: 10px; 
-                            &-article {
-                                vertical-align:middle;
-                                
-                                padding-left: 10px;            
-                            }           
-                    }
-                    
-                    
-        
-                    
-                    &--time-article, &--user-article::after{
-                        content: " | ";
-                        @include breakpoint(desktop-mobile) {
-                                content: "";
-                                }             
-                    }
-                    &--link-article{
-                        color: $gold;
-                        font-family: $kufi;
-                        text-align:right;
-                        font-size: 14px;
-                        position:relative;
-                        text-decoration:none;        
-                            @include breakpoint(desktop-mobile) {
-                                font-size: 14px;
-                                }
-                    }
-                    &--link-article::after{
-                        content: " | ";
-                        color: $black;
-                                    @include breakpoint(desktop-mobile) {
-                                        content: "";
-                                    }
-                    }
-                    
-                    
-                    
-                
-            }
 
 /*------------------------------------*\
     #MEDIA WITH BIG IMAGE
 \*------------------------------------*/    
         &--teaser{
-            display: table-row;
-            padding-right: 20px;
-            width:100%; 
+        font-weight: bold;
             > img {
             display: block;
             @include breakpoint(desktop-mobile) {
                         width:100%;
                 }
+                
             }
-        
+            &-link{
+                
+                color: $gold;
+                font-family: $naskh;
+                text-align:right;
+                font-size: 16px;
+                position:relative;
+                text-decoration:none;
+                padding-top: 20px;
+                font-weight: bold;
+                margin-bottom: 20px; 
+                display: inline-block;
+                margin-right: 6px;
+                vertical-align: middle;            
+                @include breakpoint(desktop-mobile) {
+                font-size: 16px;                                    
+                }
+            }    
+            &-text{
+                        color:$black;
+                        text-align:right;
+                        font-size: 30px;
+                        display: block;
+                        line-height:36px;
+                        margin-right: 71px;
+                        font-family: $kufi;
+                            @include breakpoint(desktop-mobile) {
+                                font-size: 16px;
+                            }
+                          
+                        
+            }
+            
+            .dash{
+                                
+                                background: none repeat scroll 0 0 #9e914c;
+                                content: "";
+                                height: 3px;
+                                display: inline-block;                                                                
+                                width: 65px;
+                    
+            }    
         }
+        
     }
 
 /*------------------------------------*\
@@ -187,9 +180,9 @@
 \*------------------------------------*/ 
     
     .media__body{
-            padding-right:30px;
+            padding-right:3.33%;           
             &--teaser{
-                margin-top: 20px;
+                
                 display:block;
             }
          
@@ -205,6 +198,185 @@
         width:39.3%;
                 > img {
                         display: block;
-                        width:100%;               
+                        width:100%;
+                            
         }
     }
+/*------------------------------------*\
+    #METADATA 
+\*------------------------------------*/            
+            .metadata{position:relative;
+                
+                    &--time{
+                        display:inline-block;
+                        color: $gray;
+                        font-size: 14px;
+                        margin-bottom: 6px;                        
+                        font-family: $serif;
+                                    vertical-align:top;
+                        }      
+                    &--location {
+                        display:inline-block;
+                        color: $gray;
+                        font-size: 14px;                        
+                        font-family: $serif;
+                        vertical-align:top;
+                       
+                                &::after{
+                                        content: " | ";
+                                        padding-left: 6px;
+                                        padding-right: 6px;
+                                        vertical-align:top;
+                                        color: $border-color;
+                        @include breakpoint(desktop-mobile) {
+                        content: "";                          
+                        }
+                                    }            
+                        @include breakpoint(desktop-mobile) {
+                        font-size: 16px;                           
+                        }
+                        
+                        /*------------------------------------*\
+                                #MEDIA ICONS INLINE (DETAILED) 
+                         \*------------------------------------*/
+                            
+                    }
+                    &--link-article, &--user-article, &--time-article{
+                                display:inline-block;
+                                color: $gray;
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                               
+                                
+                                    
+                        }
+                            
+                    &--icon{
+                        padding-left: 10px;
+                        
+                            &-article {
+                                vertical-align:middle;                               
+                                padding-left: 10px; 
+                                            
+                            }           
+                    }
+                    
+                    
+}
+
+.metadata-article{
+                display:block;
+                margin-bottom:6px;
+                
+                     &--dash{
+                                background: none repeat scroll 0 0 #9e914c;
+                                content: "";
+                                height: 3px;
+                                display:block;                               
+                                width: 65px;
+                                margin-bottom: 18px; 
+                                }
+                                
+                    &--user-article::after{
+                        content: " | ";
+                        color: $gray;
+                        @include breakpoint(desktop-mobile) {
+                                content: "";
+                                }             
+                    }
+                    &--link-article::after{
+                        content: " | ";
+                        color: $gray;
+                                    @include breakpoint(desktop-mobile) {
+                                        content: "";
+                                    }
+                    }
+                    &--time-article{
+                        display:inline-block;
+                        color: $gray;
+                        font-size: 14px;
+                        margin-bottom: 6px;                        
+                        font-family: $serif;
+                    }
+                    &--link-article, &--user-article{
+                        margin-bottom: 20px;
+                        color: $gold;
+                        font-family: $serif;
+                        text-align:right;
+                        font-size: 14px;
+                        text-decoration:none;        
+                            @include breakpoint(desktop-mobile) {
+                                font-size: 14px;
+                                }
+                    }
+                    
+                    &--icon{
+                        padding-left: 10px; 
+                        
+                            &-article {
+                                vertical-align:top;                               
+                                padding-left: 10px; 
+                                         
+                            }           
+                    }
+                    
+                    
+}                    
+.metadata-teaser-article{
+    
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom: 6px;
+    @include breakpoint(desktop-mobile) {
+                        padding-right: 65px;                           
+                        }
+                    &--time{
+                        display:inline-block;
+                        color: $gray;
+                        font-size: 14px;
+                        margin-bottom: 6px;                        
+                        font-family: $serif;
+                        vertical-align:top;
+                        }                                              
+                        /*------------------------------------*\
+                                #MEDIA ICONS INLINE (DETAILED) 
+                         \*------------------------------------*/
+                                                
+                    &--link-article, &--user-article{
+                                display:inline-block;
+                                color: $gold;
+                                font-size: 16px;
+                                margin-bottom: 5px;
+                                font-family: $naskh;
+                                &::after{
+                                        content: " | ";
+                                        padding-left: 6px;
+                                        padding-right: 6px;                                        
+                                        color: $border-color;
+                        @include breakpoint(desktop-mobile) {
+                        content: "";                          
+                        }
+                                    }            
+                        @include breakpoint(desktop-mobile) {
+                        font-size: 16px;                           
+                        }
+                    }
+                    &--time-article{
+                                color: $gray;
+                                font-family: $serif;
+                                font-size: 16px;
+                                font-weight: normal;
+                    }        
+                    &--icon{
+                        padding-left: 10px;
+                        
+                            &-article {
+                                vertical-align:middle;                               
+                                padding-left: 10px; 
+                                            
+                            }           
+                    }
+}
+                    
+                
+            
